@@ -294,19 +294,14 @@ header i:first-of-type {
   /* max-width: 100%; */
   color: #333;
 }
-@media (max-width: 769px) {
-  .services .services-contact {
-  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-
-  }
-  .services .services-contact .card {
-    flex-direction: column;
-    align-items: center;
-  }
-  .services .services-contact .card .text {
-    text-align: center;
-  }
+.services .services-contact .card {
+  flex-direction: column;
+  align-items: center;
 }
+.services .services-contact .card .text {
+  text-align: center;
+}
+
 /* design*/
 .design {
   padding: var(--section-padding) 0;
@@ -426,7 +421,7 @@ header i:first-of-type {
   color: white;
 }
 .portfolio-contact button {
-  margin: 30px auto;
+  margin: 30px auto 0;
   display: block;
   padding: 10px 20px;
   border: none;
@@ -434,5 +429,49 @@ header i:first-of-type {
   color: white;
   border-radius: 5px;
   text-transform: uppercase;
-  
+}
+/* super video */
+.super-video {
+  padding: calc(var(--section-padding) / 2) 0;
+  position: relative;
+}
+.super-video .video {
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #0000006e;
+    position: absolute;
+  }
+}
+.super-video video {
+  width: 100%;
+  height: 100%;
+}
+.super-video .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--transparent-color);
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.super-video .text h3 {
+  margin: 20px;
+  text-transform: uppercase;
+}
+.super-video .text p {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+.super-video .text button {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
 }
