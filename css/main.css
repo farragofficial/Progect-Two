@@ -97,7 +97,6 @@ header .box ul a {
 header .box li a.active {
   color: var(--main-color);
   border-bottom: 2px solid;
-
 }
 header i:last-of-type {
   padding: 10px 0px 10px 20px;
@@ -164,13 +163,13 @@ header i:first-of-type {
   color: white;
 }
 @media (max-width: 992px) {
-  .landing .box{
+  .landing .box {
     padding-left: 50px;
     width: 70%;
   }
 }
 @media (max-width: 769px) {
-  .landing .box  {
+  .landing .box {
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -181,5 +180,43 @@ header i:first-of-type {
   text-transform: capitalize;
 }
 .landing .box .text p {
-line-height: 2;
+  line-height: 2;
+}
+.landing > i:first-of-type {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  color: white;
+  transform: translateY(-50%);
+}
+.landing > i:last-of-type {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+@media (max-width: 769px) {
+  .landing i:last-of-type,
+  .landing i:first-of-type {
+    display: none;
+  }
+}
+.landing > ul {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+.landing > ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid 1px white;
+}
+.landing > ul li.active {
+  background-color: var(--main-color);
+  border: solid 1px var(--main-color);
 }
