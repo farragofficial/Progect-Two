@@ -202,13 +202,16 @@ header i:first-of-type {
 }
 
 .landing .box .text {
-  max-width: 500px;
+  max-width: 400px;
   color: white;
 }
 @media (max-width: 992px) {
   .landing .box {
     padding-left: 50px;
     width: 70%;
+  }
+  .landing .box .text {
+    max-width: 500px;
   }
 }
 @media (max-width: 769px) {
