@@ -113,7 +113,26 @@ header .container {
     left: 0px;
     bottom: 0;
   }
+  &::after {
+    content: "ahmed farrag";
+    /* width: 100%; */
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    color: rgb(255 255 255 / 50%);
+  }
 }
+@media (min-width: 791px) {
+  header .container::after {
+    letter-spacing: 10px;
+    bottom: 10px;
+  }
+}
+
 header .box {
   flex-grow: 1;
   display: flex;
@@ -298,7 +317,7 @@ header i:first-of-type {
     flex-direction: column;
     align-items: center;
   }
- 
+
   .services .services-contact .card .text {
     text-align: center;
   }
@@ -566,4 +585,131 @@ header i:first-of-type {
     flex-basis: 100%;
   }
 }
+.info {
+  padding: var(--section-padding) 0;
+}
+.info .container {
+  display: flex;
+  gap: 30px;
+}
 
+.info .container > div :is(h2) {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: normal;
+  font-size: 2.5em;
+}
+.info .container > div > :is(p) {
+  text-align: center;
+  color: #333;
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+@media (max-width: 769px) {
+  .info .container {
+    flex-direction: column;
+    gap: 70px;
+  }
+}
+.info .testimonials {
+  position: relative;
+  padding-bottom: 50px;
+}
+.info .testimonials .box {
+  margin-top: 30px;
+}
+.info .testimonials .card {
+  display: flex;
+  align-items: flex-start;
+}
+.info .testimonials .box .card img {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  position: relative;
+}
+.info .testimonials .box :first-child .text {
+  border-bottom: 1px solid #33333365;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.info .testimonials .box .card .text p {
+  margin-bottom: 10px;
+  color: #333;
+  line-height: 1.8;
+}
+.info .testimonials .box .card .text span {
+  display: flex;
+  justify-content: end;
+  color: #33333381;
+  text-transform: capitalize;
+}
+@media (max-width: 769px) {
+  .info .testimonials .box .card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info .testimonials .box .card img {
+    margin-bottom: 30px;
+  }
+}
+.testimonials ul {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+.testimonials ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid 1px rgb(0, 0, 0);
+}
+.testimonials ul li.active {
+  background-color: var(--main-color);
+  border: solid 1px var(--main-color);
+}
+.info .skills ul li .prog {
+  height: 20px;
+  background-color: #ddd;
+  margin-top: 20px;
+}
+.info .skills ul li h3 {
+  text-transform: capitalize;
+}
+.info .skills ul li .prog span {
+  background-color: var(--main-color);
+  display: block;
+  height: 100%;
+  position: relative;
+  &::after {
+    content: attr(data-width);
+    width: fit-content;
+    background-color: black;
+    padding: 2px 10px;
+    color: white;
+    font-size: 0.8em;
+    border-radius: 5px;
+    position: absolute;
+    right: -20px;
+    top: -30px;
+  }
+  &::before {
+    content: "";
+    border: 4px solid;
+    border-color: black transparent transparent;
+    position: absolute;
+    right: -2px;
+    top: -12px;
+  }
+}
+.info .skills ul {
+  margin-top: 30px;
+}
+.info .skills ul li {
+  margin-bottom: 20px;
+}
