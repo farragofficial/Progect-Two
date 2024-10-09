@@ -22,7 +22,7 @@
 ul {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -777,7 +777,6 @@ header i:first-of-type {
   border-bottom: 1px solid var(--main-color);
   padding: 20px;
   border-radius: 10px;
-
 }
 .price .card span {
   text-transform: uppercase;
@@ -815,14 +814,14 @@ header i:first-of-type {
   &::before {
     content: "\f058";
     font-family: fontawesome;
-    padding: 10px;
     background-color: var(--main-color);
     margin-right: 10px;
-    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
-
-color: #00fd15;
-
-
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    display: inline-flex; 
+    align-items: center;
+    padding-left: 5px;
+    width: 34px; height: 22px;
+    color: #00fd15;
   }
   &:not(:last-child)::after {
     content: "";
@@ -834,7 +833,6 @@ color: #00fd15;
     left: 50%;
     transform: translateX(-50%);
   }
-
 }
 .price .end {
   padding: 30px;
@@ -846,8 +844,7 @@ color: #00fd15;
   background-color: var(--main-color);
   color: #fff;
   border-radius: 10px;
-
-} 
+}
 .price .contact-info {
   margin-top: 40px;
   text-align: center;
@@ -864,5 +861,4 @@ color: #00fd15;
   background-color: var(--main-color);
   color: #fff;
   border-radius: 10px;
-
 }
