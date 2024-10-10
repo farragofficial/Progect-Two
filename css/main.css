@@ -992,8 +992,3 @@ header i:first-of-type {
     }
   }
 }
-h1 {
-  span {
-    color: red;
-  }
-}
