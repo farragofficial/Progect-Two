@@ -117,17 +117,25 @@ header .container {
     left: 0px;
     bottom: 0;
   }
-  &::after {
-    content: "ahmed farrag";
-    /* width: 100%; */
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: bolder;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    color: rgb(255 255 255 / 50%);
+  h1 {
+    font-size: 3rem;
+    color: white;
+    text-decoration: underline;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    &:before {
+      content: "F";
+      color: var(--main-color);
+    }
+    &:hover {
+      color: var(--main-color);
+      &::before {
+        color: white;
+      }
+    }
   }
 }
 @media (min-width: 791px) {
@@ -892,6 +900,10 @@ header i:first-of-type {
   display: flex;
   margin: 0 auto;
   align-items: center;
+  flex-basis: 70%;
+  @media (max-width: 769px) {
+    width: 80%;
+  }
 }
 .sub form i {
   position: absolute;
@@ -908,6 +920,7 @@ header i:first-of-type {
   margin-right: 0;
   border: 2px solid #fff;
   border-right: none;
+  width: 100%;
   &::placeholder {
     text-transform: capitalize;
   }
@@ -923,10 +936,14 @@ header i:first-of-type {
   border-left: none;
 }
 .sub p {
-  flex-grow: 1;
+  flex-basis: 35%;
   color: #fff;
   line-height: 1.8;
   text-transform: capitalize;
+  @media (max-width: 769px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .contact {
   padding: var(--section-padding) 0;
@@ -987,6 +1004,67 @@ header i:first-of-type {
       order: -1;
       margin-bottom: 20px;
       border-bottom: 2px solid var(--main-color);
+    }
+  }
+}
+footer {
+  padding: calc(var(--section-padding) / 2) 0;
+  background-image: url(../imges/subscribe.jpg);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+  }
+}
+footer .container {
+  text-align: center;
+  position: relative;
+  color: white;
+  h1 {
+    font-size: 3rem;
+    color: white;
+    text-decoration: underline;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    &:before {
+      content: "F";
+      color: var(--main-color);
+    }
+    &:hover {
+      color: var(--main-color);
+      &::before {
+        color: white;
+      }
+    }
+  }
+  p {
+    font-size: 2rem;
+    padding: 10px;
+    border-bottom: 1px solid var(--main-color);
+    width: fit-content;
+    margin: 10px auto;
+  }
+  .social i {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      color: var(--main-color);
+    }
+  }
+  .footer {
+    margin-top: 10px;
+    span {
+      color: var(--main-color);
+      font-weight: bold;
     }
   }
 }
