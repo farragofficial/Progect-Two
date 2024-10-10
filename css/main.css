@@ -921,6 +921,7 @@ header i:first-of-type {
   border: 2px solid #fff;
   border-right: none;
   width: 100%;
+  color: white;
   &::placeholder {
     text-transform: capitalize;
   }
@@ -961,6 +962,7 @@ header i:first-of-type {
     height: 40px;
     padding: 10px;
     border: 1px solid var(--main-color);
+    color: #000;
     background-color: transparent;
     &::placeholder {
       text-transform: capitalize;
