@@ -937,7 +937,7 @@ header i:first-of-type {
 }
 .contact .contact-info form {
   flex-basis: 70%;
-  & > * {
+  > * {
     display: block;
     width: 100%;
     margin-bottom: 20px;
@@ -945,14 +945,14 @@ header i:first-of-type {
     padding: 10px;
     border: 1px solid var(--main-color);
     background-color: transparent;
+    &::placeholder {
+      text-transform: capitalize;
+    }
+    &:focus {
+      outline: none;
+    }
   }
-  & > *::placeholder {
-    text-transform: capitalize;
-  }
-  & > *:focus {
-    outline: none;
-  }
-  & > input[type="submit"] {
+  input[type="submit"] {
     display: flex;
     width: fit-content;
     margin-left: auto;
@@ -960,34 +960,40 @@ header i:first-of-type {
     color: #fff;
     border: none;
     padding: 0 20px;
+    height: 62px;
   }
-  & > textarea {
+  textarea {
     height: 200px;
   }
 }
 .contact .contact-info .text {
   flex-basis: 20%;
-  & h4 {
+  h4 {
     margin-bottom: 20px;
   }
-  & span {
+  span {
     margin-bottom: 10px;
     display: block;
   }
-  & span:last-of-type {
+  span:last-of-type {
     margin-bottom: 40px;
   }
-  & address {
+  address {
     line-height: 50px;
   }
 }
 @media (max-width: 769px) {
   .contact .contact-info {
     flex-direction: column;
-    & .text {
+    .text {
       order: -1;
       margin-bottom: 20px;
       border-bottom: 2px solid var(--main-color);
     }
+  }
+}
+h1 {
+  span {
+    color: red;
   }
 }
