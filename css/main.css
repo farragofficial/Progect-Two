@@ -953,14 +953,12 @@ header i:first-of-type {
     }
   }
   input[type="submit"] {
-    display: flex;
     width: fit-content;
     margin-left: auto;
     background-color: var(--main-color);
     color: #fff;
     border: none;
     padding: 0 20px;
-    height: 62px;
   }
   textarea {
     height: 200px;
